@@ -1,0 +1,49 @@
+{
+  "name": "main_e10",
+  "description": "DP-SVD-FL on three datasets and two partitions (E = 10, T = 300, sigma = 0.95, delta = 1/N = 0.002), seeds 0, 1, 2.",
+  "paper_reference": "Sec. V; Sec. VI-A (Table III and Fig. 1, DP-SVD-FL); Sec. VI-B (Table IV, Fig. 3); Supplementary S10",
+  "protocol": {
+    "num_client_slots": 500,
+    "sampling_rate": 0.1,
+    "num_rounds": 300,
+    "local_epochs": 10,
+    "batch_size": 50,
+    "learning_rate": 0.003,
+    "learning_rate_decay": 0.998,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "batching_policy": "fixed_padded_last",
+    "clipping_norm": 0.2,
+    "noise_multiplier": 0.95,
+    "delta": null,
+    "server_learning_rate": 1.0,
+    "tau": 2.0,
+    "rho_max": 0.05,
+    "gamma": 0.95,
+    "dirichlet_alpha": 0.6,
+    "eval_every": 10,
+    "privacy_mode": "benchmark_reproducible"
+  },
+  "grid": {
+    "datasets": [
+      "cifar10",
+      "cifar100",
+      "emnist_balanced"
+    ],
+    "partitions": [
+      "dirichlet",
+      "iid"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "methods": [
+      "adaptive"
+    ],
+    "noise_multipliers": null,
+    "noise_context": "none"
+  },
+  "method_parameters": {}
+}

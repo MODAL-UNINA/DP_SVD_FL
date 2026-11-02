@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below. Publication details will be added when the paper is published."
+title: "DP-SVD-FL: Adaptive Spectral Subspace Projection for Client-Level Differentially Private Federated Learning (code)"
+type: software
+version: "1.0.0"
+license: MIT
+authors:
+  - family-names: Qiu
+    given-names: Lingyu
+  - family-names: Annunziata
+    given-names: Daniela
+  - family-names: Izzo
+    given-names: Stefano
+  - family-names: Giampaolo
+    given-names: Fabio
+  - family-names: Piccialli
+    given-names: Francesco
+preferred-citation:
+  type: article
+  title: "DP-SVD-FL: Adaptive Spectral Subspace Projection for Client-Level Differentially Private Federated Learning"
+  authors:
+    - family-names: Qiu
+      given-names: Lingyu
+    - family-names: Annunziata
+      given-names: Daniela
+    - family-names: Izzo
+      given-names: Stefano
+    - family-names: Giampaolo
+      given-names: Fabio
+    - family-names: Piccialli
+      given-names: Francesco
+  journal: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+  notes: "Manuscript submitted for review."

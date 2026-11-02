@@ -1,0 +1,46 @@
+{
+  "name": "fixed_rank_e10",
+  "description": "Separate fixed-rank spectral ablation on CIFAR-10 Dirichlet: ranks k_l^(0) selected once on W^(0), spectral bases recomputed from the released weights in every round.",
+  "paper_reference": "Sec. VI-C (fixed-rank spectral ablation)",
+  "protocol": {
+    "num_client_slots": 500,
+    "sampling_rate": 0.1,
+    "num_rounds": 300,
+    "local_epochs": 10,
+    "batch_size": 50,
+    "learning_rate": 0.003,
+    "learning_rate_decay": 0.998,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "batching_policy": "fixed_padded_last",
+    "clipping_norm": 0.2,
+    "noise_multiplier": 0.95,
+    "delta": null,
+    "server_learning_rate": 1.0,
+    "tau": 2.0,
+    "rho_max": 0.05,
+    "gamma": 0.95,
+    "dirichlet_alpha": 0.6,
+    "eval_every": 10,
+    "privacy_mode": "benchmark_reproducible"
+  },
+  "grid": {
+    "datasets": [
+      "cifar10"
+    ],
+    "partitions": [
+      "dirichlet"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "methods": [
+      "fixed_spectral"
+    ],
+    "noise_multipliers": null,
+    "noise_context": "none"
+  },
+  "method_parameters": {}
+}

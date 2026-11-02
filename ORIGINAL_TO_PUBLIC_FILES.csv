@@ -1,0 +1,192 @@
+original_file,public_file,status,notes
+src/dpsvdfl/__init__.py,src/dpsvdfl/__init__.py,rewritten,package marker
+src/dpsvdfl/baselines/__init__.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_fedavg.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_fedavg_all_nonnorm.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_fedpgn.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_fedprox.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_fedsam.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_gradnorm_penalty.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_head_only.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_lora.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/dp_scaffold.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/fed_smp_randk.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/scaffold_compaction.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/scaffold_diagnostics.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/baselines/scaffold_store.py,,excluded,comparison method: not part of this repository (DP-SVD-FL only)
+src/dpsvdfl/data/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/data/datasets.py,src/dpsvdfl/data/datasets.py,copied and cleaned,"CIFAR-10, CIFAR-100, EMNIST Balanced"
+src/dpsvdfl/data/gpu_augmentation.py,,excluded,GPU augmentation: not used by reported runs
+src/dpsvdfl/data/synthetic.py,,excluded,internal synthetic data for development tests
+src/dpsvdfl/data/transforms.py,src/dpsvdfl/data/transforms.py,pruned,CPU transforms; GPU augmentation policy removed (not used by reported runs)
+src/dpsvdfl/diagnostics/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/diagnostics/basis_privacy.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/batching_stability.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/branch_composition.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/e3_e9_analysis.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/e4_analysis.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/e6_ablation.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/lr_stability.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/lr_sweep.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/nonfinite.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/optimizer_stability.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/pgn_diagnostics.py,,excluded,DP-FedPGN support: not reported
+src/dpsvdfl/diagnostics/rank_sensitivity.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/scaffold_diagnostics.py,,excluded,DP-SCAFFOLD support: not reported
+src/dpsvdfl/diagnostics/spectral_stability.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/stability.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/tau_sensitivity.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/theoretical.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/diagnostics/v2_pilot.py,,excluded,"internal diagnostic analyses of development experiments (E1-E10 pilots, stability, sweeps) not in the paper"
+src/dpsvdfl/dp/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/dp/mechanism.py,src/dpsvdfl/dp/mechanism.py,copied and cleaned,"joint clipping, sum, Gaussian noise, /qN; unchanged computations"
+src/dpsvdfl/federated/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/federated/basis_privacy_sweep.py,,excluded,E7 basis/privacy grid: not reported
+src/dpsvdfl/federated/campaign.py,src/dpsvdfl/federated/experiment.py,replaced,"prepare (partition, schedule, W0 from the seed streams), execution, checkpoint/resume, private_release attempt ledger, public summary"
+src/dpsvdfl/federated/checkpointing.py,src/dpsvdfl/federated/io.py,partially ported,"atomic writes, JSONL logs, state-dict fingerprint; the identity/version machinery replaced by a simpler run_config check"
+src/dpsvdfl/federated/diagnostics.py,src/dpsvdfl/federated/io.py,partially ported,fingerprint() of partitions/schedules (arrays_fingerprint); descriptive summaries not needed
+src/dpsvdfl/federated/e3_e9_registry.py,src/dpsvdfl/federated/methods.py,replaced,noise contexts of the privacy sweep; comparison-method configurations dropped
+src/dpsvdfl/federated/e3_e9_suite.py,src/dpsvdfl/federated/experiment.py; configs/*.json,replaced,suite grids (datasets x partitions x seeds x methods x sigma) and the e9:sigma noise context
+src/dpsvdfl/federated/e3_e9_v2.py,,excluded,internal v2 suite variant
+src/dpsvdfl/federated/execution_contract.py,,excluded,internal resume contract of legacy runs
+src/dpsvdfl/federated/initialization_pair.py,,excluded,E2 random-initialisation experiment: not reported
+src/dpsvdfl/federated/lr_stability_pilot.py,,excluded,learning-rate pilot: not reported
+src/dpsvdfl/federated/method_registry.py,src/dpsvdfl/federated/methods.py,replaced,"registry of DP-SVD-FL and the fixed-rank ablation (namespaces, partition, representation)"
+src/dpsvdfl/federated/multi_method_campaign.py,src/dpsvdfl/federated/experiment.py,replaced,"one process per run, resume; prepared-campaign manifests not reproduced"
+src/dpsvdfl/federated/partitioning.py,src/dpsvdfl/data/partitioning.py,copied and cleaned,IID and Dirichlet(0.6) client partitions
+src/dpsvdfl/federated/rank_sensitivity.py,,excluded,rank sensitivity (E10 rank overrides): not reported
+src/dpsvdfl/federated/result_integrity.py,,excluded,internal integrity verification of stored campaigns
+src/dpsvdfl/federated/runner.py,src/dpsvdfl/federated/runner.py,pruned,"one round (encode, mechanism, decode, server update) and the T-round loop; local objectives of comparison methods, PGN, SCAFFOLD, Fed-SMP and progress hooks removed"
+src/dpsvdfl/federated/sampling.py,src/dpsvdfl/federated/sampling.py,copied and cleaned,Poisson client sampling
+src/dpsvdfl/federated/scaffold_compaction.py,,excluded,DP-SCAFFOLD support: not reported
+src/dpsvdfl/federated/seeds.py,src/dpsvdfl/federated/seeds.py,pruned,"seed plan: classifier/partition/sampling/local-training/noise streams; namespaces of DP-SVD-FL and the fixed-rank ablation; comparison-method, E4, Haar, rand-k and LoRA streams removed"
+src/dpsvdfl/federated/tau_sensitivity.py,,excluded,tau sensitivity (E5): not reported
+src/dpsvdfl/federated/variants.py,src/dpsvdfl/federated/methods.py,replaced,the fixed-rank variant round is built by methods.make_round_function
+src/dpsvdfl/models/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/models/architectures.py,,excluded,multi-architecture dispatch: only ResNet-18 is reported
+src/dpsvdfl/models/logical_blocks.py,,excluded,ViT logical blocks: not needed for ResNet-18
+src/dpsvdfl/models/lora.py,,excluded,DP-LoRA: not reported
+src/dpsvdfl/models/partitions.py,src/dpsvdfl/models/partitions.py,pruned,"ResNet-18 partition, apply_partition, BatchNorm eval"
+src/dpsvdfl/models/resnet.py,src/dpsvdfl/models/resnet.py,pruned,pretrained ResNet-18 + seeded classifier; ResNet-34 and random initialisation removed
+src/dpsvdfl/models/vit.py,,excluded,ViT-B/16: not reported
+src/dpsvdfl/privacy/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/privacy/accountant.py,src/dpsvdfl/privacy/accountant.py,copied,accountant dpsvdfl-sgm-rdp-certified-v2 unchanged; docstrings updated
+src/dpsvdfl/privacy/legacy_accountant.py,,excluded,legacy v1 accountant: not used by reported runs
+src/dpsvdfl/privacy/modes.py,src/dpsvdfl/privacy/modes.py,pruned,benchmark_reproducible / private_release records; legacy v1 accountant removed (not used by any reported run)
+src/dpsvdfl/privacy/randomness.py,src/dpsvdfl/privacy/randomness.py,pruned,OS-CSPRNG sampling and noise for private_release; E4/Haar/LoRA delegations removed
+src/dpsvdfl/privacy/verification.py,,excluded,internal privacy-verification labels
+src/dpsvdfl/server/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/server/update.py,src/dpsvdfl/federated/server_update.py,pruned,Decode and server update; logical-block assembly removed
+src/dpsvdfl/spectral/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/spectral/matricization.py,src/dpsvdfl/spectral/matricization.py,copied,unchanged
+src/dpsvdfl/spectral/projection.py,src/dpsvdfl/spectral/projection.py,pruned,"SVD bases, projection, reconstruction; Haar and override rank sources removed"
+src/dpsvdfl/spectral/random_basis.py,,excluded,Haar bases: Haar ablations not reported
+src/dpsvdfl/spectral/rank_rule.py,src/dpsvdfl/spectral/rank_rule.py,copied,rank rule unchanged; docstring updated
+src/dpsvdfl/spectral/representation.py,src/dpsvdfl/spectral/representation.py,pruned,"reduced layout, Encode, unpack; ViT logical blocks removed"
+src/dpsvdfl/spectral/strategies.py,src/dpsvdfl/spectral/strategies.py,pruned,"adaptive and fixed_spectral strategies, initial rank snapshot; fixed_haar and rank overrides removed"
+src/dpsvdfl/training/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/training/batching.py,src/dpsvdfl/training/batching.py,pruned,fixed_padded_last policy; legacy partial_last removed
+src/dpsvdfl/training/evaluation.py,src/dpsvdfl/training/evaluation.py,copied,top-1 accuracy
+src/dpsvdfl/training/local.py,src/dpsvdfl/training/local.py,pruned,"local SGD only; the local objectives of comparison methods, observers and GPU augmentation removed"
+src/dpsvdfl/utils/__init__.py,src/dpsvdfl/<package>/__init__.py,rewritten,package marker
+src/dpsvdfl/utils/gpu_scheduler.py,,excluded,machine-specific parallel scheduler (orchestration)
+src/dpsvdfl/utils/live_status.py,,excluded,dashboard status files (orchestration)
+src/dpsvdfl/utils/progress.py,,excluded,console progress reporting (orchestration)
+src/dpsvdfl/utils/reproducibility.py,src/dpsvdfl/reproducibility.py,copied and cleaned,"seed derivation (SeedSequence, SHA-256 namespaces, scoped CPU RNG); computations unchanged"
+src/dpsvdfl/utils/threads.py,,excluded,CPU thread budgets of the internal launchers (orchestration)
+experiments/analyze_e10_rank_sensitivity.py,,excluded,rank sensitivity (E10 rank overrides): not reported
+experiments/analyze_e1_spectral_diagnosis.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e2_stability.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e4_theoretical_diagnostics.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e5_aggregate.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e5_tau_sensitivity.py,,excluded,tau sensitivity (E5): not reported
+experiments/analyze_e6_ablation.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e7_aggregate.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e7_basis_privacy.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_e8_branch_composition.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/analyze_lr_stability_pilot.py,,excluded,learning-rate pilot: not reported
+experiments/b2_campaign_reference_digest.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/compare_privacy_accountants.py,scripts/compute_privacy.py,replaced,epsilon of the certified accountant only
+experiments/diagnose_batching_stability.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/diagnose_local_optimizer.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/diagnose_local_stability.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/diagnose_nonfinite_client.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/diagnose_scaffold_ab_client.py,,excluded,DP-SCAFFOLD support: not reported
+experiments/diagnose_scaffold_replay.py,,excluded,DP-SCAFFOLD support: not reported
+experiments/e1_spectral_diagnosis.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/e3_e9_campaigns.py,scripts/run_experiment.py; configs/*.json,replaced,suite definition and launching
+experiments/e3_e9_v2.py,,excluded,internal v2 suite variant
+experiments/fedpgn_reference_digest.py,,excluded,DP-FedPGN support: not reported
+experiments/finalize_multi_method_campaign.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/inspect_federation_setup.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/pilot_b7_baseline.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/pilot_dp_fedpgn.py,,excluded,DP-FedPGN support: not reported
+experiments/prepare_e10_rank_sensitivity.py,,excluded,rank sensitivity (E10 rank overrides): not reported
+experiments/prepare_e2_stability.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/prepare_e5_tau_sensitivity.py,,excluded,tau sensitivity (E5): not reported
+experiments/prepare_e7_basis_privacy.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/prepare_lr_stability_pilot.py,,excluded,learning-rate pilot: not reported
+experiments/prepare_multi_method_campaign.py,scripts/run_experiment.py,replaced,inputs are regenerated deterministically from the seeds instead of being prepared and stored
+experiments/run_campaign_method.py,scripts/run_experiment.py,replaced,CLI to run/resume one run
+experiments/run_dp_fedavg.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_dpsvdfl.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_e10_condition.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_e10_rank_sensitivity.py,,excluded,rank sensitivity (E10 rank overrides): not reported
+experiments/run_e2_stability.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_e4_theoretical_diagnostics.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_e5_tau_sensitivity.py,,excluded,tau sensitivity (E5): not reported
+experiments/run_e7_basis_privacy.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_lr_stability_pilot.py,,excluded,learning-rate pilot: not reported
+experiments/run_paired_campaign.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_parallel_campaign.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/run_short_lr_sweep.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/smoke_dp_fedpgn.py,,excluded,DP-FedPGN support: not reported
+experiments/smoke_dp_fedprox.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/smoke_dp_fedsam.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/smoke_dp_gradnorm_penalty.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/smoke_dp_lora.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/smoke_dp_scaffold.py,,excluded,DP-SCAFFOLD support: not reported
+experiments/smoke_e3_e9_orchestration.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/v2_pilot.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step10_e4.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step11_checkpoint_resume.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step12_ablation_primitives.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step2_synthetic.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step3_synthetic.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step4_synthetic.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step5_synthetic.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step6_synthetic.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step7_privacy.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step8_multiround.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validate_step9_dp_fedavg.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+experiments/validation_checks.py,,excluded,"development, validation, pilot or analysis script of experiments not reported in the paper"
+outputs/paper_tpami_e10/figures/make_tpami_figures.py,analysis/make_figures.py,ported,DP-SVD-FL curves of Figs. 1-2 and Fig. 3; comparison methods and packaging logic removed
+outputs/paper_tpami_e10/aggregate_results.py,analysis/make_tables.py; analysis/common.py,ported,"aggregation conventions (round 300, sample std); comparison tables removed"
+outputs/paper_tpami_e10/recompute_tables.py,analysis/make_tables.py; analysis/common.py,ported,table recomputation from round logs
+rank_rule_audit_e10/scripts/audit_rank_rule.py,analysis/rank_audit.py,ported,Supplementary S10.1-S10.3
+rank_rule_audit_e10/scripts/recompute_endpoints.py,analysis/rank_audit.py,ported,rank rule recomputed on W0 and final models
+rank_rule_audit_e10/scripts/noise_share.py,analysis/rank_audit.py,ported,Supplementary S10.4 noise ratios
+rank_rule_audit_e10/scripts/tail_invariance.py,,excluded,does not feed any number stated in the paper
+rank_rule_audit_e10/scripts/audit_figures.py,,excluded,audit figures not in the paper
+outputs/rank_rule_noise_only_e10/scripts/noise_only_rank_replay.py,analysis/noise_only_control.py,ported,"data-free noise-only replay, self-test, W0 validation"
+outputs/rank_rule_noise_only_e10/scripts/noise_only_30_seeds.py,analysis/noise_only_control.py,ported,30-seed extension merged
+outputs/rank_rule_noise_only_e10/scripts/verify_state_30_seeds.py,analysis/noise_only_control.py,partially ported,parameter checks folded in
+outputs/rank_rule_noise_only_e10/scripts/analyse_30_seeds.py,analysis/noise_only_statistics.py,partially ported,"Table S3, S_late seed-level permutation tests, Holm; exploratory analyses not in the paper dropped"
+outputs/rank_rule_noise_only_e10/scripts/compare_noise_only_vs_e3.py,,excluded,superseded 3-seed comparison
+outputs/rank_rule_noise_only_e10/G6_EN_verification/make_G6_projected_dimension_EN.py,analysis/noise_only_statistics.py,ported,Fig. G6
+experiments/lin_comparison/*,,excluded (directory),LIN comparison: not reported
+experiments/two_phase_dp/*,,excluded (directory),two-phase / hybrid DP experiments: not reported
+experiments/local_dp_extension/*,,excluded (directory),Local DP extension: not reported
+subspace_geometry/*,,excluded (directory),SG-3 subspace-geometry campaigns: not reported
+run_e_esecuzioni/*,,excluded (directory),machine-specific launchers and logs
+<cluster job scripts directory>/*,,excluded (directory),cluster job scripts and configuration (infrastructure-specific)
+LIN/*,,excluded (directory),LIN experiments: not reported
+analysis/*,,excluded (directory),LIN analysis: not reported
+scope/*,,excluded (directory),internal planning documents
+docs/*,,excluded (directory),internal method specifications and campaign notes
+tests/*,,excluded (directory),internal test suite of the research code (replaced by tests/ here)
+outputs/*,,excluded (directory),"experiment outputs, logs, checkpoints and archives (never published); only the scripts listed above were ported"
+reconnaissance_subspaces_2026-10-27_01/*,,excluded (directory),internal exploration
+validation_results/*,,excluded (directory),internal validation outputs
+data/*,,excluded (directory),datasets and pretrained weights (downloaded by scripts/prepare_data.py)
+rank_rule_audit_e10/results/*,,excluded (directory),audit outputs (regenerated by analysis/rank_audit.py)
